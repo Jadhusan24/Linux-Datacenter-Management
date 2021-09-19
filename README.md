@@ -2,7 +2,6 @@
 
 Configuring Linux Datacenter
 
-
 ## DNS
   Basic Implementation of DNS. \
   [Document](/DNS) \
