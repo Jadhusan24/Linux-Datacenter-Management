@@ -2,10 +2,14 @@
 
 Configuring Linux Datacenter
 
+
+## DHCP
+  Basic Implementation of DHCP. \
+  [Document](/DHCP) 
+
 ## DNS
   Basic Implementation of DNS. \
   [Document](/DNS) 
-
   
 ## FTP
   Basic Implementation of FTP. \
