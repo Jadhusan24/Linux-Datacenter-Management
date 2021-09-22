@@ -4,13 +4,13 @@ Configuring Linux Datacenter
 
 ## DNS
   Basic Implementation of DNS. \
-  [Document](/DNS) \
+  [Document](/DNS) 
 
   
 ## FTP
   Basic Implementation of FTP. \
-  [Document](/FTP) \
+  [Document](/FTP) 
 
 ## Webmin
   Basic Implementation of Webmin. \
-  [Document](/Webmin) \
+  [Document](/Webmin) 
