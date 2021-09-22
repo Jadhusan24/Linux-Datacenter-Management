@@ -1,0 +1,71 @@
+
+#check hostname
+hostname
+
+#detailed description
+hostnamectl
+
+#set hostname
+hostnamectl set-hostname pcname.domain.com
+
+#update repo
+dnf makecache
+
+#search update for dhcp
+dnf search dhcp
+
+#install dhcp service with confirmation 
+dnf install dhcp-server
+
+#install dhcp service without confirmation (-y)
+dnf install -y dhcp-server
+#or
+dnf install dhcp-server -y
+
+#check status of a service
+systemctl status dhcpd
+
+#activate a service
+systemctl enable dhcpd
+
+#configuration file location
+/etc/dhcp/dhcpd.conf
+
+#dhcp config example
+/usr/share/doc/dhcp-server/dhcpd.conf.example
+
+
+
+
+
+option domain-name "example.com";
+option domain-name-servers ns1.tecmint.lan, ns2.tecmint.lan;
+
+default-lease-time 3600; 
+max-lease-time 7200;
+authoritative;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+        option routers                  192.168.1.1;
+        option subnet-mask              255.255.255.0;
+        option domain-search            "tecmint.lan";
+        option domain-name-servers      192.168.1.1;
+        range   192.168.10.10   192.168.10.100;
+        range   192.168.10.110   192.168.10.200;
+}
+
+
+
+
+#adding services to the firewall
+firewall-cmd --add-service=dhcp --permenant
+
+#firewall reload
+firewall-cmd --reload
+
+#list services in firewall
+firewall-cmd --list-services
+
+sudo grep -R "DHCPOFFER" /var/log/*
+
+
